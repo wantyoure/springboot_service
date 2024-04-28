@@ -41,7 +41,7 @@ deploy:
     local_dir: deploy   # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
 
-  #- provider: codedeploy
+  #- provider: codedeployㄴ
     #access_key_id: $AWS_ACCESS_KEY
     #secret_access_key: $AWS_SECRET_KEY
     #bucket: jpa-cicd
