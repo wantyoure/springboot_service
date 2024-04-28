@@ -4,7 +4,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://jpa-serverdb.c7e2e4mw2c3e.ap-northeast-2.rds.amazonaws.com:3306/aws
+    url: jdbc:mysql://spring-service.c7e2e4mw2c3e.ap-northeast-2.rds.amazonaws.com:3306/spring_service
     username: admin
     password: asdf794613
     driver-class-name: com.mysql.cj.jdbc.Driver
