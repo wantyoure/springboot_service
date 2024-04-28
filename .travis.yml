@@ -26,9 +26,9 @@ script: "./gradlew clean build"
 
 
 before_deploy:
-  - zip -r spring_service *
+  - zip -r springboot_service *
   - mkdir -p deploy
-  - mv spring_service deploy/spring_service.zip
+  - mv springboot_service deploy/springboot_service.zip
 
 deploy:
   - provider: s3
