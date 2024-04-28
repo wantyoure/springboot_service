@@ -41,17 +41,17 @@ deploy:
     local_dir: deploy   # before_deploy에서 생성한 디렉토리d
     wait-until-deployed: true
 
-  #- provider: codedeployㄴ
-    #access_key_id: $AWS_ACCESS_KEY
-    #secret_access_key: $AWS_SECRET_KEY
-    #bucket: jpa-cicd
-    #key: jpa-cicd.zip
-    #bundle_type: zip
-    #application: jpa-server
-    #deployment_group: jpa-group
-    #region: ap-northeast-2
-    #wait-until-deployed: true
-# CI 실행 완료 시 작성한 이메일로 알람 해보자!! webhook go 흐음 .. fistsss
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: spring-service-build
+    key: spring-service-build.zip
+    bundle_type: zip
+    application: spring_service
+    deployment_group: spring_service_group
+    region: ap-northeast-2
+    wait-until-deployed: true
+# CI 실행 완료 시 작성한 이메일로 알람 해보자!! webhook go go
 notifications:
   email:
     recipients:
