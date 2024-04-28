@@ -51,7 +51,7 @@ deploy:
     deployment_group: spring_service_group
     region: ap-northeast-2
     wait-until-deployed: true
-# CI 실행 완료 시 작성한 이메일로 알람 해보자!! webhook go go
+# CI 실행 완료 시 작성한 이메일로 알람 해보자!! webhook go goㅇㅇ
 notifications:
   email:
     recipients:
