@@ -45,7 +45,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     bucket: spring-service-build
-    key: spring-service-build.zip
+    key: springboot-service.zip
     bundle_type: zip
     application: spring_service
     deployment_group: spring_service_group
