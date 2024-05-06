@@ -1,18 +1,16 @@
-# 자주 사용하는 값 변수에 저장
-REPOSITORY=/home/ec2-user/app/step2
-PROJECT_NAME=spring_service
+#!/bin/bash
 
-# git clone 받은 위치로 이동
-cd $REPOSITORY/$PROJECT_NAME/
+REPOSITORY=/home/ubuntu/app/step2
+PROJECT_NAME=spring-service
 
 # build 수행
 echo "> project build start"
-./gradlew build
 
 cp $REPOSITORY/zip/*.jar $REPOSITORY/
 
 echo "> 현재 구동중인 애플리케이션 pid 확인"
-CURRENT_PID=$(pgrep -fl spring_service | grep jar | awk '{print $l}')
+
+CURRENT_PID=$(pgrep -fl spring-service | grep jar | awk '{print $l}')
 
 echo "> 현재 구동중인 애플리케이션 pid: $CURRENT_PID"
 if [ -z "$CURRENT_PID" ]; then
