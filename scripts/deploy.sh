@@ -1,12 +1,19 @@
 #!/bin/bash
 
-REPOSITORY=/home/ubuntu/app/step2
+REPOSITORY=/home/ubuntu/app/step2/zip
 PROJECT_NAME=spring-service
 
 # build 수행
 echo "> project build start"
 
 cp $REPOSITORY/zip/*.jar $REPOSITORY/
+
+echo "> Git pull"
+
+git pull
+
+echo "> 프로젝트 Build 시작"
+./gradlew build
 
 echo "> 현재 구동중인 애플리케이션 pid 확인"
 
@@ -32,7 +39,4 @@ chmod +x $JAR_NAME
 
 echo "> $JAR_NAME 실행"
 
-nohup java -jar \
-  -Dspring.config.location=classpath:/application.properties,classpath:/application-real.properties,/home/ubuntu/app/application-oauth.propertices,/home/ubuntu/app/application-real-db.properties \
-  -Dspring.profiles.active=real \
-   $JAR_NAME > $REPOSITORY/$JAR_NAME 2>&1 &
+nohup java -jar $REPOSITORY/$JAR_NAME 2>&1 &
