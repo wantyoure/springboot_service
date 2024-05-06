@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPOSITORY=/home/ubuntu/app/step2
-PROJECT_NAME=spring-service
+PROJECT_NAME=spring_service
 
 # build 수행
 echo "> project build start"
@@ -17,7 +17,7 @@ echo "> 프로젝트 Build 시작"
 
 echo "> 현재 구동중인 애플리케이션 pid 확인"
 
-CURRENT_PID=$(pgrep -fl spring-service | grep jar | awk '{print $l}')
+CURRENT_PID=$(pgrep -fl spring_service | grep jar | awk '{print $l}')
 
 echo "> 현재 구동중인 애플리케이션 pid: $CURRENT_PID"
 if [ -z "$CURRENT_PID" ]; then
