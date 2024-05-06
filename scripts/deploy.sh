@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPOSITORY=/home/ubuntu/app/step2/zip
+REPOSITORY=/home/ubuntu/app/step2
 PROJECT_NAME=spring-service
 
 # build 수행
