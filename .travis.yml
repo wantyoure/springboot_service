@@ -26,7 +26,6 @@ script: "./gradlew clean build"
 
 
 before_deploy:
- # - zip -r springboot-service *
   - mkdir -p before-deploy
   - cp scripts/*.sh before-deploy/
   - cp appspec.yml before-deploy/
