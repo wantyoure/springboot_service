@@ -9,7 +9,7 @@ branches:
   only:
     - master
 
-# 빌드 전에 gradlew의 권한을 추가한다.
+# 빌드 전에 gradlew의 권한을 추가한다. go
 before_install:
   - chmod +x gradlew
 
